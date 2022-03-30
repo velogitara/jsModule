@@ -961,20 +961,214 @@
 
 
 
-function includes(array, value) {
-  // Change code below this line
-  let message = '';
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(array[i])
-    if (array[i] === value) {
-    return true
+// function includes(array, value) {
+//   // Change code below this line
+//   let message = '';
+//   for (let i = 0; i < array.length; i += 1) {
+//     console.log(array[i])
+//     if (array[i] === value) {
+//     return true
+//     }
+
+//   }
+//     return false
+//   // Change code above this line
+// }
+
+
+// console.log(includes([1, 2, 3, 4, 5], 54))
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter1"))
+
+
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+//   owner: {
+//     name: "Henry",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// // Change code below this line
+// const ownerName = apartment.owner.name;
+// const ownerPhone = apartment.owner.phone;
+// const ownerEmail = apartment.owner.email;
+// const numberOfTags = apartment.tags.length;
+// const firstTag = apartment.tags[0];
+// const lastTag = apartment.tags.pop();
+// // Change code above this line
+
+// console.log(apartment.tags);
+// console.log(lastTag);
+
+
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+
+// // const valuesOfKeys = Object.values(apartment)
+// // console.log(valuesOfKeys);
+
+
+
+// for(let key in apartment){
+//   // console.log(key);
+
+//   keys.push(key);
+//   values.push(apartment[key]);
+//   // console.log(apartment[key]);
+// }
+
+// console.log(keys);
+// console.log(values);
+
+
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   const values = Object.values(object)
+//   // console.log(values.length);
+//   propCount = values.length
+//   // console.log(object);
+
+//   // Change code above this line
+//   return propCount;
+// }
+
+
+// console.log(countProps({ name: "Mango", age: 2 }));
+
+
+
+const friends = [
+  { name: 'Mango', online: false },
+  { name: 'Kiwi', online: true },
+  { name: 'Poly', online: true },
+  { name: 'Ajax', online: false }
+];
+
+console.table(friends);
+
+const getOnlineFriends = function (allFriends) {
+
+  const isOnline = [];
+  for (const friend of allFriends) {
+    console.log(friend);
+    console.log(friend.online);
+      // const isOnline = Object.values(friend)
+  // console.log(isOnline);
+    if (friend.online) {
+      isOnline.push(friend)
     }
-
+    
   }
-    return false
-  // Change code above this line
+  return isOnline
 }
+console.log(getOnlineFriends(friends));
+
+// const findFriendByName = function (allFriends, friendName) {
+//  for (const friend of allFriends) {
+//    console.log(friend);
+//    console.log(friend.name);
+   
+//    if (friend.name === friendName) {
+//      return 'FIND!!';
+//    }
+//   }
+//   return 'NOT FIND :('
+// }
+
+// console.log(findFriendByName(friends, 'Poly1'));
+
+// const findFriendByName = function (allFriends) {
+
+//   const friendsName = [];
+//  for (const friend of allFriends) {
+//   //  console.log(friend);
+//    console.log(friend.name);
+//    friendsName.push(friend.name)
+   
+//   }
+//   return friendsName
+// }
+  
+//  console.log(findFriendByName(friends));
 
 
-console.log(includes([1, 2, 3, 4, 5], 54))
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter1"))
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// console.log(keys);
+// const valuesOfKeys = Object.values(apartment)
+// // console.log(valuesOfKeys);
+// for (const value of valuesOfKeys) {
+//   // console.log(value);
+// values.push(value)
+// }
+// console.log(values);
+ 
+
+
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+
+//  const objectKeys = Object.keys(object)
+// // console.log(objectKeys.length);
+  
+//   return propCount = objectKeys.length;
+//   // Change code above this line
+// }
+
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// console.log(keys);
+// const values = Object.values(apartment);
+// console.log(values);
+
+
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const valuesOfKeys = Object.values(salaries)
+//   console.log(valuesOfKeys);
+//   for (const value of valuesOfKeys) {
+//     console.log(value);
+//   totalSalary += value
+
+//   }
+    
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+
+
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
