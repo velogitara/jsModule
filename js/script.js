@@ -1,4 +1,7 @@
+"use strict"
+
 // let totalSpent = 2000;
+
 // let payment = 500;
 // let discount = 0;
 
@@ -1058,7 +1061,7 @@ const friends = [
   { name: 'Ajax', online: false }
 ];
 
-console.table(friends);
+// console.table(friends);
 
 const getOnlineFriends = function (allFriends) {
 
@@ -1075,7 +1078,7 @@ const getOnlineFriends = function (allFriends) {
   }
   return isOnline
 }
-console.log(getOnlineFriends(friends));
+// console.log(getOnlineFriends(friends));
 
 // const findFriendByName = function (allFriends, friendName) {
 //  for (const friend of allFriends) {
@@ -1172,3 +1175,346 @@ console.log(getOnlineFriends(friends));
 
 
 // console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+
+// =========  17
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+// for (const color of colors) {
+  
+//   // console.log(color);
+//   hexColors.push(color.hex)
+//   rgbColors.push(color.rgb)
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+
+// =========== 18
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+  
+// for (const product of products) {
+//   // console.log(product);
+//   if (product.name === productName) {
+//     // productPrice.push(product.price)
+//     return product.price
+//   }
+//   }
+//   return null
+//  // Change code above this line
+// }
+
+// console.log(getProductPrice("Radar"));
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Scanner"));
+// console.log(getProductPrice("Droid"));
+// console.log(getProductPrice("Engine"));
+
+
+// =========== 19
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const propertyNames = [];
+  
+// for (const product of products) {
+//   // console.log(product);
+// if (product[propName]) {
+//   propertyNames.push(product[propName])
+// }
+  
+
+  
+// }
+//   return propertyNames
+  
+  
+//   // Change code above this line
+// }
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("quantity"));
+// console.log(getAllPropValues("price"));
+// console.log( getAllPropValues("category"));
+
+//  ======= 20
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+
+//   // const keys = Object.keys(products)
+//   // console.log(keys);
+  
+// for (const product of products) {
+//   // console.log(product);
+//   if (product.name === productName) {
+//     return (product.price * product.quantity);
+//   }
+  
+// }
+// return 0
+//   // Пиши код выше этой строки
+// }
+
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Droid"));
+// console.log(calculateTotalPrice("Grip"));
+// console.log(calculateTotalPrice("Scanner"));
+// console.log(calculateTotalPrice("Blaster"));
+
+// Объявлена функция calculateTotalPrice(productName)
+// Вызов calculateTotalPrice("Blaster") возвращает 0
+// Вызов calculateTotalPrice("Radar") возвращает 5200
+// Вызов calculateTotalPrice("Droid") возвращает 2800
+// Вызов calculateTotalPrice("Grip") возвращает 10800
+// Вызов calculateTotalPrice("Scanner") возвращает 8100
+
+
+
+
+// const a = { x: 1, y: 2 };
+// const b = { x: 0, y: 3 };
+
+// const c = {
+//   ...a,
+//   ...b,
+// }
+
+// console.log(c);
+
+// ==== 21
+ 
+// Пришел трёхдневный прогноз максимальных температур
+//  и мы считаем среднюю температуру
+//  за три дня(meanTemperature).
+//  Замени объявления переменных yesterday,
+//   today и tomorrow одной операцией деструктуризации свойств объекта
+// highTemperatures.
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// Change code below this line
+
+// const yesterday = highTemperatures.yesterday;
+// const today = highTemperatures.today;
+// const tomorrow = highTemperatures.tomorrow;
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// console.log(highTemperatures);
+// Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+
+
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+    
+//   }
+// }
+
+
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+
+
+// for (const { hex, rgb } of colors) {
+  
+// // console.log(color);
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+  
+// }
+
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// Change code below this line
+
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//  }
+// } = forecast
+
+// const highToday = forecast.today.high;
+// const lowToday = forecast.today.low;
+// const todayIcon = forecast.today.icon;
+
+// const highTomorrow = forecast.tomorrow.high;
+// const lowTomorrow = forecast.tomorrow.low;
+// const tomorrowIcon = forecast.tomorrow.icon;
+
+//=============== 30 ===========
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const upData = { ...data }
+//   return upData
+//   // Change code above this line
+// }
+
+
+
+
+// makeTask({})
+// makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" })
+// makeTask({ category: "Finance", text: "Take interest" })
+// makeTask({ priority: "Low", text: "Choose shampoo" })
+// makeTask({ text: "Buy bread" })
+
+
+// Change code below this line
+function add(...arg) {
+  // console.log(arg);
+  let total = 0;
+  for (const item of arg) {
+    // console.log(item);
+    total += item;
+    return total
+  }
+  
+  ;
+  // Change code above this line
+}
+
+add(12, 4, 11, 48)
+
+//======= cart
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+  
+//   add(product) {
+//     this.items.push(product)
+//   },
+  
+//   remove(productName) {
+//     const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       const {name}= this.items[i];
+
+//       if (productName === name) {
+//       console.table(items);
+//       console.log('found', productName);
+//       console.log(i);
+//       items.splice(i,1)
+
+
+//     }
+//     }
+// },
+//   clear() { 
+//     this.items = []
+//   },
+  
+//   countTotalPrice() {
+//     console.log(this.items);
+    
+//     let total = 0;
+
+//     for (const item of this.items) {
+//       console.log(item);
+//       total += item.price;
+//     }
+// return total
+    
+
+//   },
+  
+  
+//   increaseQuantity(productName) { },
+//   decreaseQuantity(productName) { },
+// };
+
+
+
+// cart.add({ name: 'apple', price: 50 })
+// cart.add({ name: 'apricot', price: 70 })
+// cart.add({ name: 'pineapple', price: 70 })
+// cart.add({ name: 'strawberry', price: 110 })
+
+// console.log('total: ' , cart.countTotalPrice());
+
+// cart.remove('apple')
+// console.table(cart.getItems());
+
+
+// cart.clear();
+
+// console.table(cart.getItems());
+// console.log(cart.getItems());
+
