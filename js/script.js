@@ -1477,7 +1477,7 @@ add(12, 4, 11, 48)
 //     }
 //     }
 // },
-//   clear() { 
+//   clear() {
 //     this.items = []
 //   },
   
@@ -1518,3 +1518,64 @@ add(12, 4, 11, 48)
 // console.table(cart.getItems());
 // console.log(cart.getItems());
 
+
+
+// =========== 32 ==========
+
+// Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
+//   let allNum = 0;
+//   const [firstNum] = args
+//   // console.log(firstNum);
+//   console.log(args);
+// for (let i = 1; i < args.length; i++) {
+//   allNum = args[i]
+//   // console.log(allNum);
+//   if (firstNum < allNum) {
+//     total += allNum
+//     // console.log(total);
+//     // console.log(allNum);
+//   }
+//     }
+// return total
+  
+//   // Change code above this line
+// }
+
+// function addOverNum(...args) {
+//   let total = 0;
+//   const [firstNum, ...allNum] = args
+//   // console.log(allNum);
+//   // console.log(firstNum);
+//   allNum.forEach((number) => {
+//     if (firstNum < number) {
+//       total += number;
+//     }
+//   })
+//   return total
+// }
+
+
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// console.log(addOverNum(50, 15, 27));
+
+
+// Change code below this line
+function findMatches(args, ...rest) {
+  // console.log(args,rest);
+  const matches = []; // Don't change this line
+rest.forEach(element => {
+  console.log(element);
+  const el = args.includes(element)
+  console.log(el);
+  if (el) {
+  matches.push(element)  
+  }
+});
+  // Change code above this line
+  return matches;
+}
+
+
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
