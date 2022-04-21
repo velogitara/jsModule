@@ -1562,20 +1562,227 @@ add(12, 4, 11, 48)
 
 
 // Change code below this line
-function findMatches(args, ...rest) {
-  // console.log(args,rest);
-  const matches = []; // Don't change this line
-rest.forEach(element => {
-  console.log(element);
-  const el = args.includes(element)
-  console.log(el);
-  if (el) {
-  matches.push(element)  
-  }
-});
+// function findMatches(args, ...rest) {
+//   // console.log(args,rest);
+//   const matches = []; // Don't change this line
+// rest.forEach(element => {
+//   console.log(element);
+//   const el = args.includes(element)
+//   console.log(el);
+//   if (el) {
+//   matches.push(element)
+//   }
+// });
+//   // Change code above this line
+//   return matches;
+// }
+
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+//
+
+///=================================!!!!!!!!!!!!!!!!!!!!!!!!!!!!==================
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//    },
+//   add(product) {
+// console.table(this.items);
+//     const { items } = this;
+//     for (const item of items) {
+//       // console.log(item);
+//       const { name } = item;
+//       if (name === product.name) {
+//         item.quantity += 1;
+//         return
+//       }
+//     }
+
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
+
+//     this.items.push(newProduct)
+//    },
+//   remove(productName) {
+//  const { items } = this;
+
+//     for (let i = 0; i < items.length; i += 1) {
+//       // console.log(this.items[i]);
+//       const {name} = items[i];
+//       if (productName === name) {
+//            console.log('we found this fruit', productName);
+//       console.log('index',i);
+
+//       items.splice(i, 1);
+//       }
+     
+//     }
+   
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     console.log(this.items);
+  
+//     const { items } = this;
+
+//     let total = 0;
+
+//     for (const {price, quantity} of items) {
+//       total += price * quantity;
+//     }
+//     return total;
+//   },
+//   increaseQuantity(productName) { },
+//   decreaseQuantity(productName) { },
+// };
+
+// console.log(cart.getItems())
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍋', price: 60 });
+// cart.add({ name: '🍉', price: 80 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+// cart.add({ name: '🍓', price: 110 });
+// console.table(cart.getItems());
+
+// console.log('Total', cart.countTotalPrice());
+
+
+
+
+// cart.remove('🍋')
+// // console.table(cart.getItems());
+
+// cart.clear();
+// // console.log(cart.getItems());
+
+////=================================!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//=========== 41 ============
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  // addPotion(newPotion) {
+  //   const { potions } = this;
+  //   console.table(potions);
+  //  for (const potion of potions) {
+  //   //  console.log(potion);
+  //    const { name } = potion;
+  //     if (this.potions.includes(name)) {
+  //     return `Error! Potion ${name} is already in your inventory!`;
+  //   }
+  //  }
+   
+
+  //   this.potions.push(newPotion);
+  // },
+
+  addPotion(newPotion) {
+
+    const { potions } = this;
+    for (const potion of potions) {
+      // console.log(potion);
+      const { name } = potion;
+            // console.log(name);
+
+      // if (name === newPotion.name)
+      if (name.includes(newPotion.name))
+      {
+        
+       return `Error! Potion ${name} is already in your inventory!`;
+      }
+    }
+
+//     const newProduct = {
+//       ...product,
+//       quantity: 1,
+//     };
+
+    this.potions.push(newPotion)
+  },
+  
+
+  removePotion(potionName) {
+   
+    
+    const { potions } = this;
+    // console.table(potions);
+
+    for (let i = 0; i < potions.length; i += 1) {
+      console.log(potions[i]);
+      const {name} = potions[i]
+if (name === potionName) {
+  console.log('we found this fruit', potionName);
+  console.log('index', i);
+  potions.splice(i,1)
+}      
+    }
+
+    // for (const potion of potions) {
+      // console.log(potion);
+    // const { name } = potion;
+      // console.log(name);
+      // const potionIndex = name.indexOf(potionName)
+      // console.log(potionIndex);
+    //    if (potionIndex === 0) {
+  
+    // }
+    // }
+      
+    // if (potionIndex === -1) {
+    //   return `Potion ${potionName} is not in inventory!`;
+    // }
+
+    // this.potions.splice(potionIndex, 1);
+  },
+
+
+  updatePotionName(oldName, newName) {
+    const { potions } = this;
+    console.table(potions);
+    for (const potion of potions) {
+      console.log(potion.name);
+      const { name } = potion;
+      if (name === oldName) {
+        // potions.splice(name,1,newName)
+      }
+    }
+    // console.log(potionIndex);
+    // if (potionIndex === -1) {
+    //   return `Potion ${oldName} is not in inventory!`;
+    // }
+
+    // this.potions.splice(oldName, 1, newName);
+  },
   // Change code above this line
-  return matches;
-}
+};
 
 
-console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.table(atTheOldToad.getPotions());
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// atTheOldToad.addPotion({ name: "Dragon breath", price: 780 });
+// atTheOldToad.addPotion({ name: "Power potion", price: 270 })
+// atTheOldToad.removePotion("Dragon breath")
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.removePotion("Invisibility"));
+
+atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+
+console.table(atTheOldToad.getPotions());
