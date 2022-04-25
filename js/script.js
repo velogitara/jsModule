@@ -1588,7 +1588,7 @@ add(12, 4, 11, 48)
 //     return this.items;
 //    },
 //   add(product) {
-// console.table(this.items);
+// // console.table(this.items);
 //     const { items } = this;
 //     for (const item of items) {
 //       // console.log(item);
@@ -1613,8 +1613,8 @@ add(12, 4, 11, 48)
 //       // console.log(this.items[i]);
 //       const {name} = items[i];
 //       if (productName === name) {
-//            console.log('we found this fruit', productName);
-//       console.log('index',i);
+//       //      console.log('we found this fruit', productName);
+//       // console.log('index',i);
 
 //       items.splice(i, 1);
 //       }
@@ -1637,11 +1637,37 @@ add(12, 4, 11, 48)
 //     }
 //     return total;
 //   },
-//   increaseQuantity(productName) { },
-//   decreaseQuantity(productName) { },
+//   increaseQuantity(productName) { 
+//     const { items } = this;
+//      for (const item of items) {
+//       // console.log(item);
+//       const { name } = item;
+//       if (name === productName) {
+//         item.quantity += 1;
+//         return
+//       }
+//     }
+//   },
+//   decreaseQuantity(productName) { 
+//     const { items } = this;
+//      for (const item of items) {
+//       // console.log(item);
+//        const { name, quantity } = item;
+       
+//       if (name === productName) {
+//         if (quantity === 1) {
+//           this.remove(productName)
+        
+//         } else(item.quantity -= 1)
+        
+//         return
+//       }
+//     }
+
+//   },
 // };
 
-// console.log(cart.getItems())
+// // console.log(cart.getItems())
 
 // cart.add({ name: '🍎', price: 50 });
 // cart.add({ name: '🍋', price: 60 });
@@ -1650,6 +1676,8 @@ add(12, 4, 11, 48)
 // cart.add({ name: '🍓', price: 110 });
 // cart.add({ name: '🍓', price: 110 });
 // cart.add({ name: '🍓', price: 110 });
+// cart.increaseQuantity('🍓');
+// cart.decreaseQuantity('🍎');
 // console.table(cart.getItems());
 
 // console.log('Total', cart.countTotalPrice());
@@ -1678,20 +1706,7 @@ const atTheOldToad = {
   getPotions() {
     return this.potions;
   },
-  // addPotion(newPotion) {
-  //   const { potions } = this;
-  //   console.table(potions);
-  //  for (const potion of potions) {
-  //   //  console.log(potion);
-  //    const { name } = potion;
-  //     if (this.potions.includes(name)) {
-  //     return `Error! Potion ${name} is already in your inventory!`;
-  //   }
-  //  }
-   
-
-  //   this.potions.push(newPotion);
-  // },
+  
 
   addPotion(newPotion) {
 
@@ -1709,20 +1724,38 @@ const atTheOldToad = {
       }
     }
 
-//     const newProduct = {
-//       ...product,
-//       quantity: 1,
-//     };
+    // const newProduct = {
+    //   ...product,
+    //   quantity: 1,
+    // };
 
     this.potions.push(newPotion)
   },
   
 
   removePotion(potionName) {
-   
-    
+
+//     const { potions } = this;
+//     let el = null;
+
+//     for (let i = 0; i < potions.length; i += 1) {
+//       console.log(potions[i]);
+//       const {name} = potions[i]
+// if (name === potionName) {
+//   // console.log('we found this fruit', potionName);
+//   // console.log('index', i);
+  
+//   el = i;
+  
+// }
+//     }
+//     if (el === null) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
+//     console.log(el);
+//   return potions.splice(el,1)
     const { potions } = this;
-    // console.table(potions);
+    console.table(potions);
 
     for (let i = 0; i < potions.length; i += 1) {
       console.log(potions[i]);
@@ -1731,8 +1764,17 @@ if (name === potionName) {
   console.log('we found this fruit', potionName);
   console.log('index', i);
   potions.splice(i,1)
-}      
+}
     }
+return `Potion ${potionName} is not in inventory!`;  
+    //   const potionIndex = this.potions.indexOf(potionName);
+
+    // if (potionIndex === -1) {
+    //   return `Potion ${potionName} is not in inventory!`;
+    // }
+
+    // this.potions.splice(potionIndex, 1);
+    
 
     // for (const potion of potions) {
       // console.log(potion);
@@ -1760,9 +1802,12 @@ if (name === potionName) {
       console.log(potion.name);
       const { name } = potion;
       if (name === oldName) {
-        // potions.splice(name,1,newName)
+        potion.name = newName
       }
     }
+
+
+
     // console.log(potionIndex);
     // if (potionIndex === -1) {
     //   return `Potion ${oldName} is not in inventory!`;
@@ -1772,17 +1817,19 @@ if (name === potionName) {
   },
   // Change code above this line
 };
-
+// 
 
 // console.table(atTheOldToad.getPotions());
 // atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
 // console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 780 }));
 // atTheOldToad.addPotion({ name: "Dragon breath", price: 780 });
 // atTheOldToad.addPotion({ name: "Power potion", price: 270 })
-// atTheOldToad.removePotion("Dragon breath")
-// console.log(atTheOldToad.removePotion("Dragon breath"));
+// atTheOldToad.removePotion("Dragon breath1")
+// console.log(atTheOldToad.removePotion("Dragon breath1"));
+// console.log(atTheOldToad.removePotion("Stone skin"));
 // console.log(atTheOldToad.removePotion("Invisibility"));
 
-atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth")
 
-console.table(atTheOldToad.getPotions());
+// console.table(atTheOldToad.getPotions());
