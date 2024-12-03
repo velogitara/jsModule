@@ -163,7 +163,7 @@
 //     //         newArray.push(numbers[i]);
 //     //     }
 //   // }
-  
+
 //   for (const element of numbers) {
 //     if (element > value) {
 //           newArray.push(element);
@@ -180,7 +180,6 @@
 // console.log(filterArray([12, 24, 8, 41, 76], 38));
 // console.log(filterArray([12, 24, 8, 41, 76], 20));
 
-
 // function getCommonElements(array1, array2) {
 //   // Change code below this line
 //       const newArray = [];
@@ -190,15 +189,15 @@
 //     newArray.push(element);
 //   }
 // }
-  
-  // for (const element of array1) { 
-  //   console.log(element)
-  //   if (array2.includes(element)) {
-  //     newArray.push(element);
-  //   }
-  // }
-  // return newArray
-    // Change code above this line
+
+// for (const element of array1) {
+//   console.log(element)
+//   if (array2.includes(element)) {
+//     newArray.push(element);
+//   }
+// }
+// return newArray
+// Change code above this line
 // }
 
 // console.log(getCommonElements([1, 2, 3], [2, 4]));
@@ -206,8 +205,6 @@
 // console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
 // console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
 // console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
-
-
 
 // function getEvenNumbers(start, end) {
 //   // Change code below this line
@@ -221,29 +218,26 @@
 
 //     // Change code above this line
 // }
-  
+
 // console.log(getEvenNumbers(2, 5) )
 // console.log(getEvenNumbers(3, 11))
-// console.log(getEvenNumbers(6, 12)) 
-// console.log(getEvenNumbers(7, 7)) 
-// console.log(getEvenNumbers(8, 8)) 
+// console.log(getEvenNumbers(6, 12))
+// console.log(getEvenNumbers(7, 7))
+// console.log(getEvenNumbers(8, 8))
 
+// function includes(array, value) {
+//   // Change code below this line
+//   for (const number of array) {
+//     if (number === value) {
+//       return true;
+//     }
+//     // Change code above this line
+//   }
+//     return false;
 
-function includes(array, value) {
-  // Change code below this line
-  for (const number of array) {
-    if (number === value) {
-      return true;
-    }
-    // Change code above this line
-  }
-    return false;
+// }
 
-}
-
-
-
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")); 
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
