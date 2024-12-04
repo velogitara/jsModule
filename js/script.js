@@ -225,19 +225,22 @@
 // console.log(getEvenNumbers(7, 7))
 // console.log(getEvenNumbers(8, 8))
 
-// function includes(array, value) {
-//   // Change code below this line
-//   for (const number of array) {
-//     if (number === value) {
-//       return true;
-//     }
-//     // Change code above this line
-//   }
-//     return false;
+function includes(array, value) {
+    // Change code below this line
+    for (const number of array) {
+        if (number === value) {
+            return true;
+        }
+        // Change code above this line
+    }
+    return false;
+}
 
-// }
-
-// console.log(includes([1, 2, 3, 4, 5], 3));
-// console.log(includes([1, 2, 3, 4, 5], 17));
-// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([1, 2, 3, 4, 5], 17));
+console.log(
+    includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+);
+console.log(
+    includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus")
+);
