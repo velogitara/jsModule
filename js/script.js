@@ -407,63 +407,189 @@
 // console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
 // console.log(bookShelf.updateBook("Dungeon chronicles", "Haze"));
 
-const atTheOldToad = {
-    potions: [
-        { name: "Speed potion", price: 460 },
-        { name: "Dragon breath", price: 780 },
-        { name: "Stone skin", price: 520 },
-    ],
-    // Change code below this line
-    getPotions() {
-        return this.potions;
-    },
-    addPotion(newPotion) {
-        const { name: newPotionName } = newPotion;
-        for (const { name } of this.potions) {
-            if (name === newPotionName) {
-                return `Error! Potion ${newPotionName} is already in your inventory!`;
-            }
-        }
-        this.potions.push(newPotion);
-        return this.potions;
-        // return (this.potions = [...this.potions, newPotion]);
-    },
-    removePotion(potionName) {
-        for (let i = 0; i < this.potions.length; i += 1) {
-            const { name } = this.potions[i];
-            if (potionName === name) {
-                this.potions.splice(i, 1);
-                return this.potions;
-            }
-        }
+// const atTheOldToad = {
+//     potions: [
+//         { name: "Speed potion", price: 460 },
+//         { name: "Dragon breath", price: 780 },
+//         { name: "Stone skin", price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//         return this.potions;
+//     },
+//     addPotion(newPotion) {
+//         const { name: newPotionName } = newPotion;
+//         for (const { name } of this.potions) {
+//             if (name === newPotionName) {
+//                 return `Error! Potion ${newPotionName} is already in your inventory!`;
+//             }
+//         }
+//         this.potions.push(newPotion);
+//         return this.potions;
+//         // return (this.potions = [...this.potions, newPotion]);
+//     },
+//     removePotion(potionName) {
+//         for (let i = 0; i < this.potions.length; i += 1) {
+//             const { name } = this.potions[i];
+//             if (potionName === name) {
+//                 this.potions.splice(i, 1);
+//                 return this.potions;
+//             }
+//         }
 
-        return `Potion ${potionName} is not in inventory!`;
-    },
-    updatePotionName(oldName, newName) {
-        const { potions } = this;
+//         return `Potion ${potionName} is not in inventory!`;
+//     },
+//     updatePotionName(oldName, newName) {
+//         const { potions } = this;
 
-        for (const potion of potions) {
-            if (potion.name === oldName) {
-                console.log("found matching name", potion.name);
-                potion.name = newName;
-                console.log(this.potions);
-                return this.potions;
-            }
-        }
+//         for (const potion of potions) {
+//             if (potion.name === oldName) {
+//                 console.log("found matching name", potion.name);
+//                 potion.name = newName;
+//                 console.log(this.potions);
+//                 return this.potions;
+//             }
+//         }
 
-        return `Potion ${oldName} is not in inventory!`;
-    },
-    // Change code above this line
-};
+//         return `Potion ${oldName} is not in inventory!`;
+//     },
+//     // Change code above this line
+// };
 
-console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
-// console.log(atTheOldToad.removePotion("Dragon breath"));
 // console.log(atTheOldToad.getPotions());
-console.log(
-    atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
-);
-console.log(
-    atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
-);
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+// // console.log(atTheOldToad.removePotion("Dragon breath"));
+// // console.log(atTheOldToad.getPotions());
+// console.log(
+//     atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+// );
+// console.log(
+//     atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")
+// );
+
+// const tweets = [
+//     { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//     { id: "001", likes: 2, tags: ["html", "css"] },
+//     { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//     { id: "003", likes: 8, tags: ["css", "react"] },
+//     { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+// console.log(allTags);
+
+// const tagStats = allTags.reduce((acc, tag) => {
+//     console.log(acc);
+//     // if (acc[tag]) {
+//     //     acc[tag] += 1;
+//     //     return acc;
+//     // }
+//     // acc[tag] = 1;
+//     // return acc;
+//     return {
+//         ...acc,
+//         [tag]: acc[tag] ? acc[tag] + 1 : 1
+//     }
+// }, {});
+
+// function deliverPizza(pizzaName) {
+//     return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//     return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//     return callback(pizzaName);
+// }
+
+// console.log(makeMessage("Royal Grand", makePizza));
+
+// const pizzaPalace = {
+//     pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//     order(pizzaName, onSuccess, onError) {
+//         const foundPizza = this.pizzas.find(pizza => pizza === pizzaName );
+//         if (foundPizza) {
+//             return onSuccess(pizzaName)
+//         }
+//         return onError(`There is no pizza with a name ${pizzaName} in the assortment.`)
+//     },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//     return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//     return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// function calculateTotalPrice(orderedItems) {
+//     let totalPrice = 0;
+//     // Change code below this line
+
+//     // for (let i = 0; i < orderedItems.length; i += 1) {
+//     //     totalPrice += orderedItems[i];
+//     // }
+//     orderedItems.forEach((el, i, array) => (totalPrice += el));
+
+//     // Change code above this line
+//     return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function getCommonElements(firstArray, secondArray) {
+//     const commonElements = [];
+//     // Change code below this line
+
+//     // for (let i = 0; i < firstArray.length; i += 1) {
+//     //     if (secondArray.includes(firstArray[i])) {
+//     //         commonElements.push(firstArray[i]);
+//     //     }
+//     // }
+//     firstArray.forEach((el) => {
+//          if (secondArray.includes(el)) {
+//              commonElements.push(el);
+//          }
+//     })
+
+//     return commonElements;
+//     // Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+
+// function changeEven(numbers, value) {
+//     // Change code below this line
+//     const newArray = [];
+//     numbers.forEach((el) => {
+//         if (el % 2 === 0) {
+//             newArray.push(el + value)
+//         }else (newArray.push(el))
+//     });
+// return newArray;
+
+// }
+// // Change code above this line
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+
+
+const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// Change code below this line
+const planetsLengths = planets;
